@@ -52,11 +52,12 @@
       el("div",{},[btn])
     ]));
     function doLogin(){
-      if (pass.value!=="1") { alert("Şifre hatalı."); return; }
-      const user = USERS.find(u=>u.name===select.value);
-      localStorage.setItem("user", JSON.stringify(user));
-      renderApp();
-    }
+  // Şifre kontrolünü geçici olarak kaldırdık
+  const user = USERS.find(u => u.name === select.value);
+  localStorage.setItem("user", JSON.stringify(user));
+  renderApp();
+}
+
   }
 
   async function loadStores(){
